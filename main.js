@@ -1,13 +1,16 @@
 let ID = 0;
 let currentID = 0;
 
-const files = ['about.txt'];
+const files = ['about.txt', 'contact.txt', "skills.txt", "misc.txt"];
 
 const blurbs  = {
-    'about.txt': "Hi! My name is Nasr. I'm a CS major at UChicago\n" + 
-                 "I'll be working at Civis Analytics as a software engineer starting this summer\n" + 
-                 "I'm very interested in learning about new projects / oppurtunities\n" + 
-                 "Please free to contact me at nasrmaswood@gmail.com"
+    'about.txt': "Hi! My name is Nasr. I'm a CS major at UChicago\n" +
+                 "I'm interested in education, programming and a couple of other things too.\n" +
+                 "If you are interested in reaching out " + 
+                 'type &nbsp;<mark class="code">cat contact.txt</mark> &nbsp; to see my info',
+
+    'contact.txt': "personal: nasrmaswood@gmail.com\nschool: nmaswood@uchicago.edu\ngithub:",
+    'skills.txt': "Python\nJavascript\nAngularJs\nRails\nGolang\n"
 }
 
 const handlers = {
@@ -21,8 +24,11 @@ const handlers = {
     cat: (input) => {
 
         for (let i = 0; i < input.length;i++){
+            let word = input[i];
 
-            functions.insertOutput(blurbs[input[i]]);
+            let output = word in blurbs? blurbs[input[i]]: `cat ${word}: No such file or directory`;
+            functions.insertOutput(output);
+
         }
 
     },
@@ -33,6 +39,9 @@ const handlers = {
             functions.insertOutput(files[i]);
 
         }
+    },
+    pwd: (input) => {
+        functions.insertOutput("Users/Nasr");
     }
 }
 
@@ -87,12 +96,12 @@ const functions = {
         line.setAttribute('class', 'line');
 
         setAttributes(line, {
-            'class':'line',
+            'class':'line font',
             'id':`line-${ID}`,
         });
 
         setAttributes(inputBar,{
-            'class': 'shell-box',
+            'class': 'shell-box font',
             'type': 'text',
             'status': 'active',
             'autofocus':'',
@@ -129,7 +138,7 @@ const functions = {
             let div = document.createElement('div');
             div.innerHTML = tokenized[i];
             setAttributes(div, {
-                'class':'output',
+                'class':'output font',
                 'id':`output-${currentID}-{i}`,
             });
 
@@ -137,6 +146,13 @@ const functions = {
 
         }
     }
+}
+
+function removeLastInput(){
+
+}
+
+function createClickAble(){
 }
 
 function init(){
