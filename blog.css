@@ -1,0 +1,36 @@
+.container-body {
+    width:100%;
+    background: #010030;
+}
+
+.outer-body{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.blog-header{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+
+.links{
+
+}
+
+.article {
+    color:inherit;
+}
+.inherit {
+    color:inherit;
+}
+
+.font {
+
+    font-size:15px;
+    color:white;
+    font-family:monospace;
+    font-size:15px;
+}
+

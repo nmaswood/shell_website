@@ -13,7 +13,7 @@ class Article{
 
         const doc = document;
         const article = doc.createElementById("div");
-        article.setAttribute("class", "article");
+        article.setAttribute("class", "article font");
 
         article.appendChild(a);
 
@@ -27,11 +27,10 @@ class Article{
 
 // constructor(url, title, date, category){
 const articles = [
-    new Article('foo', 'bar', 'bar', 'bar')
+    new Article('&gt; foo', 'bar', 'bar', 'bar')
 ]
 
 function init(){
-
 
 }
 
