@@ -25,11 +25,8 @@
 }
 
 .font { 
-
-    font-size:15px;
+    font: 15px monospace;
     color:white;
-    font-family:monospace;
-    font-size:15px;
 }
 
 a { 

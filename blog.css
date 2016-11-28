@@ -5,8 +5,7 @@
 
 .outer-body{
     width:90%;
-    margin-left:auto;
-    margin-right:auto;
+    margin: 0px auto 10px auto;
 }
 
 .blog-header{
@@ -14,23 +13,12 @@
     margin-bottom:10px;
 }
 
-
-.links{
-
-}
-
-.article {
-    color:inherit;
-}
 .inherit {
     color:inherit;
 }
 
 .font {
-
-    font-size:15px;
+    font:15px monospace;
     color:white;
-    font-family:monospace;
-    font-size:15px;
 }
 
